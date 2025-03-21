@@ -16,6 +16,7 @@ This application is used to collect employee data from the admin.
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#development-server">Development Server</a></li>
+        <li><a href="#installation">Installation</li>
       </ul>
     </li>
   </ol>
@@ -63,6 +64,26 @@ The application can be forked or cloned into the local machine. Once forked or c
     ```sh
     npm install -g rxjs@6.5.4
     ```
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Vignesh-0521/Task-01-User-Hub
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the application
+   ```sh
+   ng serve
+   ```
+4. Open the browser and navigate to:
+   ```sh
+   http://localhost:4200
+   ```
 
 ### Development Server
 

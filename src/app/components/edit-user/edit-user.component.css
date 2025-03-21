@@ -1,0 +1,64 @@
+.form-container {     /* styling the form*/
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input.ng-touched.ng-invalid {   /* if invalid input box border becomes red*/
+    border: 2px solid red;
+  }
+  input.ng-touched.ng-valid {     /* if valid input box border becomes green*/
+    border: 2px solid green;
+  }
+  
+  input {     /* for input text area */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .error {      /* if there are errors */
+    color: red;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  button {      /* styling the save button */
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  
+  button[type="button"] {   /* styimg the cancel button */
+    background: #dc3545;
+  }
+  

@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.employeeId }}</td>
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>
+          <button (click)="editUser(user.employeeId)">Edit</button>
+          <button (click)="deleteUser(user.employeeId)">Delete</button>
+          <button (click)="viewUser(user.employeeId)">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

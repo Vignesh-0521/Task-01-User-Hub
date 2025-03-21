@@ -1,0 +1,58 @@
+<div class="form-container">
+    <h2>Edit User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="saveUser()">     <!--on submitting the form, saveUser() is called to save the edited data-->
+  
+      <label>First Name:</label>  
+      <input type="text" formControlName="firstName" />
+      <span *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched">
+        <small *ngIf="userForm.get('firstName')?.errors?.['required']" class="error">First Name is required.</small> <!-- required error -->
+        <small *ngIf="userForm.get('firstName')?.errors?.['minlength']" class="error">    <!-- minlength error -->
+          Must be at least {{ userForm.get('firstName')?.errors?.['minlength'].requiredLength }} characters.
+        </small>
+      </span>
+  
+      <label>Last Name:</label>
+      <input type="text" formControlName="lastName" />
+      <span *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched">
+        <small *ngIf="userForm.get('lastName')?.errors?.['required']" class="error">Last Name is required.</small> <!-- required error -->
+        <small *ngIf="userForm.get('lastName')?.errors?.['minlength']" class="error">   <!-- minlength error -->
+          Must be at least {{ userForm.get('lastName')?.errors?.['minlength'].requiredLength }} characters.
+        </small>
+      </span>
+  
+      <label>Email:</label>
+      <input type="email" formControlName="email" />
+      <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+        <small *ngIf="userForm.get('email')?.errors?.['required']" class="error">Email is required.</small>   <!-- required error -->
+        <small *ngIf="userForm.get('email')?.errors?.['email']" class="error">Enter a valid email address.</small>    <!-- invalid error -->
+      </span>
+  
+      <label>Employee ID:</label>
+      <input type="text" formControlName="employeeId" [disabled]="true" />
+      <span *ngIf="userForm.get('employeeId')?.invalid && userForm.get('employeeId')?.touched">
+        <small *ngIf="userForm.get('employeeId')?.errors?.['required']" class="error">Employee ID is required.</small>    <!-- required error -->
+        <small *ngIf="userForm.get('employeeId')?.errors?.['pattern']" class="error">   <!-- pattern error -->
+          Employee ID must be exactly 5 digits.
+        </small>
+      </span>
+  
+      <label>Role:</label>
+      <input type="text" formControlName="occupation" />
+      <span *ngIf="userForm.get('occupation')?.invalid && userForm.get('occupation')?.touched">
+        <small *ngIf="userForm.get('occupation')?.errors?.['required']" class="error">Occupation is required.</small>   <!-- required error -->
+      </span>
+  
+      <label>Address:</label>
+      <input type="text" formControlName="address" />
+      <span *ngIf="userForm.get('address')?.invalid && userForm.get('address')?.touched">
+        <small *ngIf="userForm.get('address')?.errors?.['required']" class="error">Address is required.</small>   <!-- required error -->
+        <small *ngIf="userForm.get('address')?.errors?.['minlength']" class="error">    <!-- minlength error -->
+          Must be at least {{ userForm.get('address')?.errors?.['minlength'].requiredLength }} characters.
+        </small>
+      </span>
+  
+      <button type="submit" [disabled]="userForm.invalid">Save</button> <!-- on clicking save button, ngsubmit calls the saveUser method -->
+      <button type="button" (click)="cancelEdit()">Cancel</button>    <!-- on clicking cancel, calls the cancelEdit() method -->
+    </form>
+  </div>
+  

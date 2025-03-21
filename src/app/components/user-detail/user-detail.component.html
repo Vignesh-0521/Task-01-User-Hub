@@ -1,0 +1,16 @@
+<div class="user-detail-container">   <!--Displaying user details-->
+  <div *ngIf="user; else notFound" class="user-detail-card">
+    <h2 id="user-detail-title">User Details</h2>
+    <p><strong>First Name:</strong> {{ user.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Employee ID:</strong> {{ user.employeeId }}</p>
+    <p><strong>Occupation:</strong> {{ user.occupation }}</p>
+    <p><strong>Address:</strong> {{ user.address }}</p>
+    <button class="back-btn" (click)="goBack()">Back to Users</button> 
+  </div>
+
+  <ng-template #notFound>   <!--else not found-->
+    <p class="not-found">User not found.</p>
+  </ng-template>
+</div>

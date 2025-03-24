@@ -70,7 +70,7 @@ The application can be forked or cloned into the local machine. Once forked or c
     ```
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Below is an example of how you can install and set up this app.
 
 1. Clone the repository:
    ```sh
